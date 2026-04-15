@@ -43,14 +43,21 @@
 
             <nav id="main-nav" aria-label="Navegação principal">
                 <ul>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#experience">Experiência</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#gesture-lab">Vision Lab</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#about"       data-i18n="nav.about">Sobre</a></li>
+                    <li><a href="#skills"      data-i18n="nav.skills">Habilidades</a></li>
+                    <li><a href="#experience"  data-i18n="nav.experience">Experiência</a></li>
+                    <li><a href="#projects"    data-i18n="nav.projects">Projetos</a></li>
+                    <li><a href="#gesture-lab" data-i18n="nav.lab">Vision Lab</a></li>
+                    <li><a href="#contact"     data-i18n="nav.contact">Contato</a></li>
                 </ul>
                 <div class="nav-social">
+                    <!-- Language Selector -->
+                    <div class="lang-selector" role="group" aria-label="Language selector">
+                        <button class="lang-btn active" data-lang="pt" title="Português BR">🇧🇷</button>
+                        <button class="lang-btn" data-lang="en" title="English">🇺🇸</button>
+                        <button class="lang-btn" data-lang="es" title="Español">🇪🇸</button>
+                        <button class="lang-btn" data-lang="zh" title="中文">🇨🇳</button>
+                    </div>
                     <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
                         class="nav-badge nav-badge--green" aria-label="GitHub">GH</a>
                     <a href="https://www.linkedin.com/in/jose-eduardo-soutello-de-oliveira/" target="_blank"
@@ -72,14 +79,14 @@
         <section class="hero" aria-label="Apresentação">
             <div class="container hero-layout">
                 <div class="hero-content">
-                    <div class="section-label">
+                    <div class="section-label" data-i18n-html="hero.status">
                         <span class="blink">▶</span> System Status: <span class="text-green">ONLINE</span>
                     </div>
                     <h1 class="glitch-text" data-text="Visão Computacional">
-                        Desenvolvedor de<br>
-                        <span class="gradient-text">Sistemas de Medição & IA</span>
+                        <span data-i18n="hero.title.pre">Desenvolvedor de</span><br>
+                        <span class="gradient-text" data-i18n="hero.title.main">Sistemas de Medição &amp; IA</span>
                     </h1>
-                    <p class="hero-desc">
+                    <p class="hero-desc" data-i18n-html="hero.desc">
                         Engenheiro na <strong>WEG</strong> desenvolvendo sistemas de inspeção visual e qualidade
                         industrial com Visão Computacional, LabVIEW e Python.
                     </p>
@@ -92,8 +99,8 @@
                         <span class="tag">WEG · DSM</span>
                     </div>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn--primary">Explorar Projetos</a>
-                        <a href="#contact" class="btn btn--secondary">Init Connection</a>
+                        <a href="#projects" class="btn btn--primary"   data-i18n="hero.btn.explore">Explorar Projetos</a>
+                        <a href="#contact"  class="btn btn--secondary" data-i18n="hero.btn.connect">Init Connection</a>
                     </div>
                 </div>
 
@@ -109,15 +116,15 @@
                     <div class="hero-stats-strip">
                         <div class="hero-stat">
                             <span class="hero-stat__value text-cyan">5+</span>
-                            <span class="hero-stat__label">Anos de Exp.</span>
+                            <span class="hero-stat__label" data-i18n="hero.stat.exp">Anos de Exp.</span>
                         </div>
                         <div class="hero-stat">
                             <span class="hero-stat__value text-magenta">WEG</span>
-                            <span class="hero-stat__label">Empresa Atual</span>
+                            <span class="hero-stat__label" data-i18n="hero.stat.company">Empresa Atual</span>
                         </div>
                         <div class="hero-stat">
                             <span class="hero-stat__value text-green">DSM</span>
-                            <span class="hero-stat__label">Time de Atuação</span>
+                            <span class="hero-stat__label" data-i18n="hero.stat.team">Time de Atuação</span>
                         </div>
                     </div>
                 </div>
@@ -139,13 +146,13 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-text">
-                        <h2>Sistemas de Medição,<br>Visão Computacional & IA</h2>
-                        <p>
+                        <h2 data-i18n-html="about.h2">Sistemas de Medição,<br>Visão Computacional &amp; IA</h2>
+                        <p data-i18n-html="about.p1">
                             Sou <strong>Desenvolvedor de Sistemas de Medição na WEG</strong> — uma das maiores
                             fabricantes de equipamentos elétricos do mundo — atuando no time de DSM (Desenvolvimento de
                             Sistemas de Medição) em Jaraguá do Sul, SC.
                         </p>
-                        <p>
+                        <p data-i18n-html="about.p2">
                             Combino <strong>Visão Computacional</strong>, <strong>LabVIEW</strong> e
                             <strong>Python</strong> para criar sistemas de inspeção e controle de qualidade em linha de
                             produção industrial. Ex-pesquisador em parceria com a <strong>FAPESC</strong>, com passagens
@@ -153,22 +160,22 @@
                         </p>
                         <div class="about-meta">
                             <div class="meta-item">
-                                <span class="meta-item__key">EMPRESA</span>
-                                <span class="meta-item__val">WEG — Time DSM</span>
+                                <span class="meta-item__key" data-i18n="meta.company.k">EMPRESA</span>
+                                <span class="meta-item__val">WEG — DSM - Vision</span>
                             </div>
                             <div class="meta-item">
-                                <span class="meta-item__key">FOCO</span>
-                                <span class="meta-item__val">Visão Computacional / Qualidade Industrial</span>
+                                <span class="meta-item__key" data-i18n="meta.focus.k">FOCO</span>
+                                <span class="meta-item__val" data-i18n="meta.focus.v">Visão Computacional / Qualidade Industrial</span>
                             </div>
                             <div class="meta-item">
-                                <span class="meta-item__key">LOCALIZAÇÃO</span>
+                                <span class="meta-item__key" data-i18n="meta.location.k">LOCALIZAÇÃO</span>
                                 <span class="meta-item__val">Jaraguá do Sul, SC 🇧🇷</span>
                             </div>
                         </div>
                         <div class="about-actions">
-                            <a href="mailto:eduardosoutellodev@gmail.com" class="btn btn--primary">Contato Direto</a>
+                            <a href="mailto:eduardosoutellodev@gmail.com" class="btn btn--primary" data-i18n="about.btn.contact">Contato Direto</a>
                             <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
-                                class="btn btn--ghost">Ver GitHub</a>
+                                class="btn btn--ghost" data-i18n="about.btn.github">Ver GitHub</a>
                         </div>
                     </div>
                     <div class="about-visual">
@@ -180,16 +187,17 @@
                                 <span class="terminal-card__title">profile.json</span>
                             </div>
                             <pre class="terminal-card__body"><code><span class="t-bracket">{</span>
-  <span class="t-key">"name"</span>: <span class="t-str">"Eduardo Soutello"</span>,
+  <span class="t-key">"alias"</span>: <span class="t-str">"Eduardo Soutello"</span>,
+  <span class="t-key">"name"</span>: <span class="t-str">"Jose Eduardo Soutello de Oliveira"</span>,
   <span class="t-key">"company"</span>: <span class="t-str">"WEG — DSM"</span>,
-  <span class="t-key">"role"</span>: <span class="t-str">"Dev. Sistemas de Medição"</span>,
+  <span class="t-key">"role"</span>: <span class="t-str">"Developer"</span>,
+  <span class="t-key">"field"</span>: <span class="t-str">"Computer Vision"</span>,
   <span class="t-key">"stack"</span>: <span class="t-bracket">[</span>
-    <span class="t-str">"Python"</span>, <span class="t-str">"LabVIEW"</span>,
+    <span class="t-str">"Python"</span>, <span class="t-str">"Angular"</span>,
     <span class="t-str">"OpenCV"</span>, <span class="t-str">"YOLO"</span>
   <span class="t-bracket">]</span>,
-  <span class="t-key">"research"</span>: <span class="t-str">"FAPESC (2024)"</span>,
-  <span class="t-key">"location"</span>: <span class="t-str">"Jaraguá do Sul, SC"</span>,
-  <span class="t-key">"experience"</span>: <span class="t-str">"5+ anos"</span>,
+  <span class="t-key">"location"</span>: <span class="t-str">"-26.4845899995878, -49.0526257967004"</span>,
+  <span class="t-key">"experience"</span>: <span class="t-str">"5+ years"</span>,
   <span class="t-key">"status"</span>: <span class="t-str">"working @ WEG"</span>
 <span class="t-bracket">}</span></code></pre>
                         </div>
@@ -205,7 +213,7 @@
                     <span class="section-title__prefix">02</span>
                     Neural Weights / Expertise
                 </div>
-                <h2>Technical Stack</h2>
+                <h2 data-i18n="skills.h2">Technical Stack</h2>
                 <div class="skills-grid">
                     <div class="skill-card skill-card--cyan">
                         <div class="skill-card__icon">👁️</div>
@@ -218,7 +226,7 @@
                                 <div class="skill-bar__fill" data-width="98"></div>
                             </div>
                         </div>
-                        <p>YOLO, OpenCV, TensorRT, Semantic Segmentation, Object Tracking, OCR</p>
+                        <p data-i18n="skill.cv.p">YOLO, OpenCV, TensorRT, Semantic Segmentation, Object Tracking, OCR</p>
                     </div>
 
                     <div class="skill-card skill-card--magenta">
@@ -232,12 +240,12 @@
                                 <div class="skill-bar__fill skill-bar__fill--magenta" data-width="95"></div>
                             </div>
                         </div>
-                        <p>PyTorch, TensorFlow, Neural Networks, NLP, Generative AI</p>
+                        <p data-i18n="skill.ai.p">PyTorch, TensorFlow, Neural Networks, NLP, Generative AI</p>
                     </div>
 
                     <div class="skill-card skill-card--green">
                         <div class="skill-card__icon">⚡</div>
-                        <h3>Python / C++</h3>
+                        <h3 data-i18n="skill.code.h3">Python / C++</h3>
                         <div class="skill-bar-wrapper">
                             <div class="skill-bar-label">
                                 <span>Proficiency</span><span class="text-green">92%</span>
@@ -246,12 +254,12 @@
                                 <div class="skill-bar__fill skill-bar__fill--green" data-width="92"></div>
                             </div>
                         </div>
-                        <p>High-Performance Computing, Backend Systems, Embedded & Edge AI</p>
+                        <p data-i18n="skill.code.p">High-Performance Computing, Backend Systems, Embedded &amp; Edge AI</p>
                     </div>
 
                     <div class="skill-card skill-card--cyan">
                         <div class="skill-card__icon">🔧</div>
-                        <h3>MLOps & Infra</h3>
+                        <h3>MLOps &amp; Infra</h3>
                         <div class="skill-bar-wrapper">
                             <div class="skill-bar-label">
                                 <span>Proficiency</span><span class="text-cyan">85%</span>
@@ -260,12 +268,12 @@
                                 <div class="skill-bar__fill" data-width="85"></div>
                             </div>
                         </div>
-                        <p>Docker, CUDA, ONNX, Model Optimization, CI/CD Pipeline</p>
+                        <p data-i18n="skill.mlops.p">Docker, CUDA, ONNX, Model Optimization, CI/CD Pipeline</p>
                     </div>
 
                     <div class="skill-card skill-card--magenta">
                         <div class="skill-card__icon">📡</div>
-                        <h3>Sistemas Embarcados</h3>
+                        <h3 data-i18n="skill.embedded.h3">Sistemas Embarcados</h3>
                         <div class="skill-bar-wrapper">
                             <div class="skill-bar-label">
                                 <span>Proficiency</span><span class="text-magenta">88%</span>
@@ -274,12 +282,12 @@
                                 <div class="skill-bar__fill skill-bar__fill--magenta" data-width="88"></div>
                             </div>
                         </div>
-                        <p>Raspberry Pi, NVIDIA Jetson, Edge Deployment, Real-time Systems</p>
+                        <p data-i18n="skill.embedded.p">Raspberry Pi, NVIDIA Jetson, Edge Deployment, Real-time Systems</p>
                     </div>
 
                     <div class="skill-card skill-card--green">
                         <div class="skill-card__icon">🌐</div>
-                        <h3>Web & API</h3>
+                        <h3>Web &amp; API</h3>
                         <div class="skill-bar-wrapper">
                             <div class="skill-bar-label">
                                 <span>Proficiency</span><span class="text-green">80%</span>
@@ -288,7 +296,7 @@
                                 <div class="skill-bar__fill skill-bar__fill--green" data-width="80"></div>
                             </div>
                         </div>
-                        <p>FastAPI, REST APIs, WebSockets, JavaScript, React</p>
+                        <p data-i18n="skill.web.p">FastAPI, REST APIs, WebSockets, JavaScript, React</p>
                     </div>
                 </div>
             </div>
@@ -301,7 +309,7 @@
                     <span class="section-title__prefix">03</span>
                     Data Log / Experiência
                 </div>
-                <h2>Timeline de Carreira</h2>
+                <h2 data-i18n="exp.h2">Timeline de Carreira</h2>
                 <div class="timeline">
 
                     <!-- WEG: Desenvolvedor de Sistemas de Medição -->
@@ -312,21 +320,21 @@
                         <div class="timeline-card">
                             <div class="timeline-card__header">
                                 <div>
-                                    <h3>Desenvolvedor de Sistemas de Medição</h3>
-                                    <span class="timeline-company">WEG · Tempo Integral · Presencial</span>
+                                    <h3 data-i18n="exp.weg1.role">Desenvolvedor de Sistemas de Medição</h3>
+                                    <span class="timeline-company" data-i18n="exp.weg1.company">WEG · Tempo Integral · Presencial</span>
                                 </div>
                                 <span class="timeline-date">fev 2025 — atual</span>
                             </div>
-                            <p>Responsável por realizar e orientar profissionais de nível júnior em atividades de
+                            <p data-i18n="exp.weg1.p">Responsável por realizar e orientar profissionais de nível júnior em atividades de
                                 desenvolvimento de sistemas para controle e garantia da qualidade em processo — atuando
                                 no projeto, documentação, desenvolvimento, adequação e correção. Negociação entre áreas
                                 e pesquisa de novas tecnologias de medição e inspeção, implementando inovações nos
                                 processos atuais.</p>
                             <div class="timeline-tags">
-                                <span class="tag tag--sm">LabVIEW</span>
                                 <span class="tag tag--sm">Python</span>
+                                <span class="tag tag--sm">Angular</span>
+                                <span class="tag tag--sm">LabVIEW</span>
                                 <span class="tag tag--sm">Qualidade Industrial</span>
-                                <span class="tag tag--sm">Jaraguá do Sul, SC</span>
                             </div>
                         </div>
                     </div>
@@ -339,15 +347,16 @@
                         <div class="timeline-card timeline-card--featured">
                             <div class="timeline-card__header">
                                 <div>
-                                    <h3>Pesquisador em Visão Computacional</h3>
-                                    <span class="timeline-company">WEG · Temporário · Pesquisa FAPESC</span>
+                                    <h3 data-i18n="exp.weg2.role">Pesquisador em Visão Computacional</h3>
+                                    <span class="timeline-company" data-i18n="exp.weg2.company">WEG · Temporário · Pesquisa FAPESC</span>
                                 </div>
                                 <span class="timeline-date">jul 2024 — jan 2025</span>
                             </div>
-                            <p>Desenvolvimento de projeto de visão computacional para análise de qualidade de partes de
+                            <p data-i18n-html="exp.weg2.p">Desenvolvimento de projeto de visão computacional para análise de qualidade de partes de
                                 motores (2D e 3D), sem impactar o ritmo de produção. Análise de fornecedores de hardware
                                 e software, execução de testes no laboratório de inovações tecnológicas do time de DSM.
-                                <strong>Pesquisa em parceria com a FAPESC.</strong></p>
+                                <strong>Pesquisa em parceria com a FAPESC.</strong>
+                            </p>
                             <div class="timeline-tags">
                                 <span class="tag tag--sm">Python</span>
                                 <span class="tag tag--sm">LabVIEW</span>
@@ -365,12 +374,12 @@
                         <div class="timeline-card">
                             <div class="timeline-card__header">
                                 <div>
-                                    <h3>Consultor Técnico de TI Jr</h3>
-                                    <span class="timeline-company">FI Group · Tempo Integral · Híbrido</span>
+                                    <h3 data-i18n="exp.fi.role">Consultor Técnico de TI Jr</h3>
+                                    <span class="timeline-company" data-i18n="exp.fi.company">FI Group · Tempo Integral · Híbrido</span>
                                 </div>
                                 <span class="timeline-date">set 2022 — jun 2024</span>
                             </div>
-                            <p>Consultoria especializada em inovação com base no manual de Frascati. Definição de
+                            <p data-i18n="exp.fi.p">Consultoria especializada em inovação com base no manual de Frascati. Definição de
                                 cronogramas, planejamento estratégico para levantamento de dados das empresas.
                                 Elaboração de relatórios técnicos e defesa perante o MCTI. Atuação integrada com áreas
                                 comercial e jurídica.</p>
@@ -378,7 +387,6 @@
                                 <span class="tag tag--sm">Inovação</span>
                                 <span class="tag tag--sm">Microsoft Excel</span>
                                 <span class="tag tag--sm">Segurança da Informação</span>
-                                <span class="tag tag--sm">Curitiba, PR</span>
                             </div>
                         </div>
                     </div>
@@ -391,17 +399,18 @@
                         <div class="timeline-card">
                             <div class="timeline-card__header">
                                 <div>
-                                    <h3>Analista de Projetos e Infraestrutura</h3>
-                                    <span class="timeline-company">Bradesco · Estágio · Híbrido</span>
+                                    <h3 data-i18n="exp.bradesco.role">Analista de Projetos e Infraestrutura</h3>
+                                    <span class="timeline-company" data-i18n="exp.bradesco.company">Bradesco · Estágio · Híbrido</span>
                                 </div>
                                 <span class="timeline-date">abr 2021 — jun 2022</span>
                             </div>
-                            <p>Atendimento de chamados e criação/manutenção de scripts na ferramenta de schedule IWS.
+                            <p data-i18n="exp.bradesco.p">Atendimento de chamados e criação/manutenção de scripts na ferramenta de schedule IWS.
                                 Execução em ambientes de desenvolvimento, homologação e produção. Participação em
                                 reuniões de brainstorm com metodologia Ágil. Mapeamento de ativos para atualização
                                 programada de hardware.</p>
                             <div class="timeline-tags">
                                 <span class="tag tag--sm">Mainframe</span>
+                                <span class="tag tag--sm">Linux</span>
                                 <span class="tag tag--sm">IWS</span>
                                 <span class="tag tag--sm">Segurança da Informação</span>
                                 <span class="tag tag--sm">Agile</span>
@@ -420,7 +429,7 @@
                     <span class="section-title__prefix">04</span>
                     Processed Frames / Portfolio
                 </div>
-                <h2>Projetos em Destaque</h2>
+                <h2 data-i18n="proj.h2">Projetos em Destaque</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-card__header">
@@ -435,8 +444,8 @@
                         </div>
                         <div class="project-card__body">
                             <div class="project-card__meta">CONFIDENCE: <span class="text-green">0.9984</span></div>
-                            <h3>Real-time Edge Detection</h3>
-                            <p>Sistema de detecção de objetos otimizado para dispositivos de borda com latência
+                            <h3 data-i18n="proj.edge.h3">Real-time Edge Detection</h3>
+                            <p data-i18n="proj.edge.p">Sistema de detecção de objetos otimizado para dispositivos de borda com latência
                                 ultra-baixa, usando TensorRT FP16 e pipeline customizado em C++.</p>
                             <div class="project-card__stack">
                                 <span class="tag tag--sm">YOLO</span>
@@ -448,7 +457,7 @@
                         <div class="project-card__footer">
                             <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
                                 class="project-link">
-                                <span>Ver Código</span> →
+                                <span data-i18n="proj.link">Ver Código</span> →
                             </a>
                         </div>
                     </div>
@@ -466,8 +475,8 @@
                         </div>
                         <div class="project-card__body">
                             <div class="project-card__meta">IOU_SCORE: <span class="text-magenta">0.892</span></div>
-                            <h3>Autonomous Navigation</h3>
-                            <p>Algoritmo de segmentação semântica para navegação indoor de robôs autônomos. Combina SLAM
+                            <h3 data-i18n="proj.nav.h3">Autonomous Navigation</h3>
+                            <p data-i18n="proj.nav.p">Algoritmo de segmentação semântica para navegação indoor de robôs autônomos. Combina SLAM
                                 e visão para mapeamento dinâmico de ambientes.</p>
                             <div class="project-card__stack">
                                 <span class="tag tag--sm">PyTorch</span>
@@ -479,7 +488,7 @@
                         <div class="project-card__footer">
                             <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
                                 class="project-link project-link--magenta">
-                                <span>Ver Código</span> →
+                                <span data-i18n="proj.link">Ver Código</span> →
                             </a>
                         </div>
                     </div>
@@ -494,8 +503,8 @@
                         </div>
                         <div class="project-card__body">
                             <div class="project-card__meta">PRECISION: <span class="text-cyan">0.992</span></div>
-                            <h3>Multimeter OCR Engine</h3>
-                            <p>Engine customizado de OCR para leitura de displays de 7 segmentos em multímetros.
+                            <h3 data-i18n="proj.ocr.h3">Multimeter OCR Engine</h3>
+                            <p data-i18n="proj.ocr.p">Engine customizado de OCR para leitura de displays de 7 segmentos em multímetros.
                                 Funciona em condições adversas de iluminação sem marcadores externos.</p>
                             <div class="project-card__stack">
                                 <span class="tag tag--sm">OpenCV</span>
@@ -506,7 +515,7 @@
                         <div class="project-card__footer">
                             <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
                                 class="project-link">
-                                <span>Ver Código</span> →
+                                <span data-i18n="proj.link">Ver Código</span> →
                             </a>
                         </div>
                     </div>
@@ -521,8 +530,8 @@
                         </div>
                         <div class="project-card__body">
                             <div class="project-card__meta">ACCURACY: <span class="text-green">0.998</span></div>
-                            <h3>Biometric System</h3>
-                            <p>Sistema de autenticação facial de alta precisão com detecção de vivacidade (liveness
+                            <h3 data-i18n="proj.bio.h3">Biometric System</h3>
+                            <p data-i18n="proj.bio.p">Sistema de autenticação facial de alta precisão com detecção de vivacidade (liveness
                                 detection). Resistente a falsificações por foto/vídeo.</p>
                             <div class="project-card__stack">
                                 <span class="tag tag--sm">FaceNet</span>
@@ -533,7 +542,7 @@
                         <div class="project-card__footer">
                             <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
                                 class="project-link">
-                                <span>Ver Código</span> →
+                                <span data-i18n="proj.link">Ver Código</span> →
                             </a>
                         </div>
                     </div>
@@ -541,7 +550,7 @@
 
                 <div class="projects-cta">
                     <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
-                        class="btn btn--ghost">
+                        class="btn btn--ghost" data-i18n="proj.cta">
                         Ver todos os projetos no GitHub →
                     </a>
                 </div>
@@ -556,8 +565,8 @@
                     Experimental / Vision Lab
                 </div>
                 <div class="lab-header">
-                    <h2>Hand Gesture Lab</h2>
-                    <p>Experimente minha tecnologia de reconhecimento de gestos em tempo real, diretamente no seu
+                    <h2 data-i18n="lab.h2">Hand Gesture Lab</h2>
+                    <p data-i18n="lab.p">Experimente minha tecnologia de reconhecimento de gestos em tempo real, diretamente no seu
                         navegador. Processamento 100% local — nenhum dado enviado.</p>
                 </div>
 
@@ -581,40 +590,54 @@
                     <!-- Right: Control Panel -->
                     <div class="lab-controls hud-panel">
                         <div class="mode-selector" role="group" aria-label="Modo de jogo">
-                            <button class="mode-btn active" data-mode="symbols" id="mode-symbols">SÍMBOLOS</button>
-                            <button class="mode-btn" data-mode="jutsus" id="mode-jutsus">JUTSUS</button>
+                            <button class="mode-btn active" data-mode="symbols" id="mode-symbols" data-i18n="lab.mode.symbols">SÍMBOLOS</button>
+                            <button class="mode-btn" data-mode="rps" id="mode-rps" data-i18n="lab.mode.rps">JOKENPÔ</button>
                         </div>
 
                         <div class="challenge-box">
-                            <div class="hud-label">OBJETIVO ATUAL</div>
-                            <div id="target-gesture" class="target-display">JOINHA</div>
-                            <div id="jutsu-sequence" class="sequence-display" style="display: none;"
-                                aria-label="Sequência de jutsu">
-                                <span class="step active">1</span>
-                                <span class="step">2</span>
-                                <span class="step">3</span>
+                            <!-- Modo Símbolos -->
+                            <div id="symbols-panel">
+                                <div class="hud-label" data-i18n="lab.target.label">LETRA ALVO (LIBRAS / ASL)</div>
+                                <div id="target-gesture" class="target-display">A — Polegar ↑</div>
+                            </div>
+
+                            <!-- Modo Jokenpô -->
+                            <div id="rps-panel" style="display:none;">
+                                <div class="hud-label" data-i18n="lab.rps.label">JOKENPÔ — Mostre sua jogada</div>
+                                <div class="rps-arena">
+                                    <div class="rps-side">
+                                        <div class="rps-label" data-i18n="lab.rps.you">VOCÊ</div>
+                                        <div id="rps-player" class="rps-icon">❓</div>
+                                    </div>
+                                    <div class="rps-vs">VS</div>
+                                    <div class="rps-side">
+                                        <div class="rps-label" data-i18n="lab.rps.ai">IA</div>
+                                        <div id="rps-cpu" class="rps-icon">❓</div>
+                                    </div>
+                                </div>
+                                <div id="rps-result" class="rps-result">Faça um gesto!</div>
                             </div>
                         </div>
 
                         <div class="stats-box">
                             <div class="stat-item">
-                                <span>FPS:</span>
+                                <span data-i18n="lab.fps">FPS:</span>
                                 <span id="fps-counter">0</span>
                             </div>
                             <div class="stat-item">
-                                <span>ACERTOS:</span>
+                                <span data-i18n="lab.score">ACERTOS:</span>
                                 <span id="score-counter">0</span>
                             </div>
                         </div>
 
                         <div class="stream-input-box">
-                            <div class="hud-label">FONTE DE VÍDEO (IP OPCIONAL)</div>
+                            <div class="hud-label" data-i18n="lab.stream.label">FONTE DE VÍDEO (IP OPCIONAL)</div>
                             <input type="text" id="stream-url" placeholder="http://192.168.1.x:4747/video"
                                 class="hud-input" aria-label="URL do stream IP">
                         </div>
 
-                        <button id="start-camera" class="btn btn--primary btn-full">INICIAR CÂMERA</button>
-                        <p class="lab-note">🔒 Sua câmera não é gravada. Processamento 100% no navegador.</p>
+                        <button id="start-camera" class="btn btn--primary btn-full" data-i18n="lab.btn.start">INICIAR CÂMERA</button>
+                        <p class="lab-note" data-i18n="lab.note">🔒 Sua câmera não é gravada. Processamento 100% no navegador.</p>
                     </div>
                 </div>
             </div>
@@ -629,8 +652,8 @@
                 </div>
                 <div class="contact-layout">
                     <div class="contact-info">
-                        <h2>Inicie uma<br><span class="gradient-text">Conexão</span></h2>
-                        <p>Interessado em colaborar, discutir projetos de Visão Computacional, ou simplesmente trocar
+                        <h2 data-i18n-html="contact.h2">Inicie uma<br><span class="gradient-text">Conexão</span></h2>
+                        <p data-i18n="contact.p">Interessado em colaborar, discutir projetos de Visão Computacional, ou simplesmente trocar
                             uma ideia sobre o futuro da IA? Minha caixa de entrada está aberta.</p>
                         <div class="contact-links">
                             <a href="https://www.linkedin.com/in/jose-eduardo-soutello-de-oliveira/" target="_blank"
@@ -661,21 +684,24 @@
 
                     <form class="contact-form" id="contact-form" novalidate>
                         <div class="form-group">
-                            <label for="contact-name" class="hud-label">IDENTIFICAÇÃO</label>
-                            <input type="text" id="contact-name" name="name" class="hud-input" placeholder="Seu nome"
+                            <label for="contact-name" class="hud-label" data-i18n="contact.name.label">IDENTIFICAÇÃO</label>
+                            <input type="text" id="contact-name" name="name" class="hud-input"
+                                data-i18n-placeholder="contact.name.ph" placeholder="Seu nome"
                                 required autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <label for="contact-email" class="hud-label">EMAIL</label>
+                            <label for="contact-email" class="hud-label" data-i18n="contact.email.label">EMAIL</label>
                             <input type="email" id="contact-email" name="email" class="hud-input"
-                                placeholder="seu@email.com" required autocomplete="email">
+                                data-i18n-placeholder="contact.email.ph" placeholder="seu@email.com"
+                                required autocomplete="email">
                         </div>
                         <div class="form-group">
-                            <label for="contact-message" class="hud-label">MENSAGEM</label>
+                            <label for="contact-message" class="hud-label" data-i18n="contact.msg.label">MENSAGEM</label>
                             <textarea id="contact-message" name="message" class="hud-input hud-textarea"
+                                data-i18n-placeholder="contact.msg.ph"
                                 placeholder="Descreva seu projeto ou proposta..." rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn--primary btn-full" id="form-submit-btn">
+                        <button type="submit" class="btn btn--primary btn-full" id="form-submit-btn" data-i18n="contact.submit">
                             ENVIAR MENSAGEM
                         </button>
                         <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
@@ -689,7 +715,7 @@
     <footer>
         <div class="container footer-inner">
             <div class="footer-logo">EDUARDO_<span>SOUTELLO</span></div>
-            <p class="footer-copy">© 2026 Eduardo Soutello — Engineer // Developer // Visionary</p>
+            <p class="footer-copy" data-i18n="footer.copy">© 2026 Eduardo Soutello — Engineer // Developer // Visionary</p>
             <p class="footer-version">V_2.0.26_STABLE</p>
         </div>
     </footer>
