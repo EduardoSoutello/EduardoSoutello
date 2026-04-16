@@ -670,6 +670,10 @@ h2 {
     align-items: start;
 }
 
+.about-grid > * {
+    min-width: 0;
+}
+
 .about-text h2 {
     margin-bottom: 1.5rem;
 }
