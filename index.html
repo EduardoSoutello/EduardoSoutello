@@ -1,135 +1,752 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Eduardo Soutello de Oliveira</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #e0e0e0, #bdbdbd);
-            color: #333;
-        }
-        header {
-            background: #424242;
-            color: #fff;
-            padding: 1.5rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-            font-size: 1rem;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .section {
-            background: #f5f5f5;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .section h2 {
-            font-size: 1.5rem;
-            color: #424242;
-            margin-bottom: 0.5rem;
-        }
-        .section p {
-            margin: 0.5rem 0;
-        }
-        .gif-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .gif-container img {
-            width: 200px;
-            height: 200px;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #616161;
-            color: #fff;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .linktr-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .linktr-container a {
-            display: inline-block;
-            margin: 0.5rem;
-            padding: 0.8rem 1.2rem;
-            background: #424242;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .linktr-container a:hover {
-            background: #616161;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-            .section h2 {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
+    <title>Eduardo Soutello | Computer Vision Engineer</title>
+    <meta name="description"
+        content="Eduardo Soutello - Engenheiro da Computação especializado em Visão Computacional e Inteligência Artificial. Portfólio profissional com projetos de deep learning e processamento de imagem.">
+    <meta name="keywords"
+        content="Computer Vision, AI, Machine Learning, OpenCV, YOLO, Python, C++, Engenheiro de Computação">
+    <meta name="author" content="Eduardo Soutello">
+    <meta property="og:title" content="Eduardo Soutello | Computer Vision Engineer">
+    <meta property="og:description"
+        content="Especialista em Visão Computacional e IA. Desenvolvendo o futuro da percepção de máquina.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://fav.farm/👁️">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>José Eduardo Soutello de Oliveira</h1>
-        <p>Engenheiro da Computação| Especialista em Inteligência Artificial | P&D</p>
+    <!-- CRT & Scanline Effects -->
+    <div class="crt-overlay" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header id="main-header">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="Eduardo Soutello - Home">
+                EDUARDO_<span>SOUTELLO</span>
+            </a>
+
+            <nav id="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experiência</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                    <li><a href="#gesture-lab" data-i18n="nav.lab">Vision Lab</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+                </ul>
+                <div class="nav-social">
+                    <!-- Language Selector -->
+                    <div class="lang-selector" role="group" aria-label="Language selector">
+                        <button class="lang-btn active" data-lang="pt" data-flag="🇧🇷"
+                            aria-label="Português BR">PT</button>
+                        <button class="lang-btn" data-lang="en" data-flag="🇺🇸" aria-label="English">EN</button>
+                        <button class="lang-btn" data-lang="es" data-flag="🇪🇸" aria-label="Español">ES</button>
+                        <button class="lang-btn" data-lang="zh" data-flag="🇨🇳" aria-label="中文">ZH</button>
+                    </div>
+                    <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
+                        class="nav-badge nav-badge--green" aria-label="GitHub">GH</a>
+                    <a href="https://www.linkedin.com/in/jose-eduardo-soutello-de-oliveira/" target="_blank"
+                        rel="noopener noreferrer" class="nav-badge nav-badge--cyan" aria-label="LinkedIn">IN</a>
+                </div>
+            </nav>
+
+            <!-- Hamburger Button (mobile) -->
+            <button id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
-    <div class="container">
-        <section class="section">
-            <h2>Sobre Mim</h2>
-            <p>CMinha motivação se baseia em crescer profissionalmente e alcançar resultados expressivos, sempre com o foco no entendimento profundo das demandas e na aplicação eficiente de nossas competências. Fortaleço a carteira de clientes através de um sólido entendimento de regras de negócio e uma comunicação eficaz, habilidades que são constantemente aprimoradas e que se refletem na qualidade do nosso trabalho coletivo.</p>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-label="Apresentação">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <div class="section-label" data-i18n-html="hero.status">
+                        <span class="blink">▶</span> System Status: <span class="text-green">ONLINE</span>
+                    </div>
+                    <h1 class="glitch-text" data-text="Visão Computacional">
+                        <span data-i18n="hero.title.pre">Desenvolvedor de</span><br>
+                        <span class="gradient-text" data-i18n="hero.title.main">Sistemas de Medição & IA</span>
+                    </h1>
+                    <p class="hero-desc" data-i18n-html="hero.desc">
+                        Engenheiro na <strong>WEG</strong> desenvolvendo sistemas de inspeção visual e qualidade
+                        industrial com Visão Computacional, LabVIEW e Python.
+                    </p>
+                    <div class="hero-tags" aria-label="Especialidades">
+                        <span class="tag">Python</span>
+                        <span class="tag">LabVIEW</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">YOLO</span>
+                        <span class="tag">Visão Computacional</span>
+                        <span class="tag">WEG · DSM</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn--primary" data-i18n="hero.btn.explore">Explorar Projetos</a>
+                        <a href="#contact" class="btn btn--secondary" data-i18n="hero.btn.connect">Init Connection</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="main-image-container">
+                        <img src="assets/hero.png" alt="Eduardo Soutello - AI Lab Workspace" loading="eager">
+                        <div id="vision-overlay"></div>
+                        <div class="img-corner img-corner--tl"></div>
+                        <div class="img-corner img-corner--tr"></div>
+                        <div class="img-corner img-corner--bl"></div>
+                        <div class="img-corner img-corner--br"></div>
+                    </div>
+                    <div class="hero-stats-strip">
+                        <div class="hero-stat">
+                            <span class="hero-stat__value text-cyan">5+</span>
+                            <span class="hero-stat__label" data-i18n="hero.stat.exp">Anos de Exp.</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat__value text-magenta">WEG</span>
+                            <span class="hero-stat__label" data-i18n="hero.stat.company">Empresa Atual</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat__value text-green">DSM</span>
+                            <span class="hero-stat__label" data-i18n="hero.stat.team">Time de Atuação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <span class="scroll-indicator__text">SCROLL</span>
+                <div class="scroll-indicator__line"></div>
+            </div>
         </section>
-        <section class="section">
-            <h2>Habilidades</h2>
-            <p>- Gestão de Projetos</p>
-            <p>- Engenharia da Computação</p>
-            <p>- Data Science e IA - Python</p>
-            <p>- Inovação e Melhoria Contínua</p>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="section fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-title__prefix">01</span>
+                    Analysis / Bio
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 data-i18n-html="about.h2">Sistemas de Medição,<br>Visão Computacional & IA</h2>
+                        <p data-i18n-html="about.p1">
+                            Sou <strong>Desenvolvedor de Sistemas de Medição na WEG</strong> — uma das maiores
+                            fabricantes de equipamentos elétricos do mundo — atuando no time de DSM (Desenvolvimento de
+                            Sistemas de Medição) em Jaraguá do Sul, SC.
+                        </p>
+                        <p data-i18n-html="about.p2">
+                            Combino <strong>Visão Computacional</strong>, <strong>LabVIEW</strong> e
+                            <strong>Python</strong> para criar sistemas de inspeção e controle de qualidade em linha de
+                            produção industrial. Ex-pesquisador em parceria com a <strong>FAPESC</strong>, com passagens
+                            pela FI Group e Bradesco.
+                        </p>
+                        <div class="about-meta">
+                            <div class="meta-item">
+                                <span class="meta-item__key" data-i18n="meta.company.k">EMPRESA</span>
+                                <span class="meta-item__val">WEG — DSM - Vision</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-item__key" data-i18n="meta.focus.k">FOCO</span>
+                                <span class="meta-item__val" data-i18n="meta.focus.v">Visão Computacional / Qualidade
+                                    Industrial</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-item__key" data-i18n="meta.location.k">LOCALIZAÇÃO</span>
+                                <span class="meta-item__val">Jaraguá do Sul, SC 🇧🇷</span>
+                            </div>
+                        </div>
+                        <div class="about-actions">
+                            <a href="mailto:eduardosoutellodev@gmail.com" class="btn btn--primary"
+                                data-i18n="about.btn.contact">Contato Direto</a>
+                            <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
+                                class="btn btn--ghost" data-i18n="about.btn.github">Ver GitHub</a>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="terminal-card">
+                            <div class="terminal-card__header">
+                                <span class="dot dot--red"></span>
+                                <span class="dot dot--yellow"></span>
+                                <span class="dot dot--green"></span>
+                                <span class="terminal-card__title">profile.json</span>
+                            </div>
+                            <pre class="terminal-card__body"><code><span class="t-bracket">{</span>
+  <span class="t-key">"alias"</span>: <span class="t-str">"Eduardo Soutello"</span>,
+  <span class="t-key">"name"</span>: <span class="t-str">"Jose Eduardo Soutello de Oliveira"</span>,
+  <span class="t-key">"company"</span>: <span class="t-str">"WEG — DSM"</span>,
+  <span class="t-key">"role"</span>: <span class="t-str">"Developer"</span>,
+  <span class="t-key">"field"</span>: <span class="t-str">"Computer Vision"</span>,
+  <span class="t-key">"stack"</span>: <span class="t-bracket">[</span>
+    <span class="t-str">"Python"</span>, <span class="t-str">"Angular"</span>,
+    <span class="t-str">"OpenCV"</span>, <span class="t-str">"YOLO"</span>
+  <span class="t-bracket">]</span>,
+  <span class="t-key">"location"</span>: <span class="t-str">"-26.4845899995878, -49.0526257967004"</span>,
+  <span class="t-key">"experience"</span>: <span class="t-str">"5+ years"</span>,
+  <span class="t-key">"status"</span>: <span class="t-str">"working @ WEG"</span>
+<span class="t-bracket">}</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class="section">
-            <h2>Contatos</h2>
-            <p><a href="mailto:eduardosoutello@outlook.com">eduardosoutello@outlook.com</a></p>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="section fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-title__prefix">02</span>
+                    Neural Weights / Expertise
+                </div>
+                <h2 data-i18n="skills.h2">Technical Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-card skill-card--cyan">
+                        <div class="skill-card__icon">👁️</div>
+                        <h3>Computer Vision</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label">
+                                <span>Proficiency</span><span class="text-cyan">98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__fill" data-width="98"></div>
+                            </div>
+                        </div>
+                        <p data-i18n="skill.cv.p">YOLO, OpenCV, TensorRT, Semantic Segmentation, Object Tracking, OCR
+                        </p>
+                    </div>
+
+                    <div class="skill-card skill-card--magenta">
+                        <div class="skill-card__icon">🤖</div>
+                        <h3>Artificial Intelligence</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label">
+                                <span>Proficiency</span><span class="text-magenta">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__fill skill-bar__fill--magenta" data-width="95"></div>
+                            </div>
+                        </div>
+                        <p data-i18n="skill.ai.p">PyTorch, TensorFlow, Neural Networks, NLP, Generative AI</p>
+                    </div>
+
+                    <div class="skill-card skill-card--green">
+                        <div class="skill-card__icon">⚡</div>
+                        <h3 data-i18n="skill.code.h3">Python / C++</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label">
+                                <span>Proficiency</span><span class="text-green">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__fill skill-bar__fill--green" data-width="92"></div>
+                            </div>
+                        </div>
+                        <p data-i18n="skill.code.p">High-Performance Computing, Backend Systems, Embedded &amp; Edge AI
+                        </p>
+                    </div>
+
+                    <div class="skill-card skill-card--cyan">
+                        <div class="skill-card__icon">🔧</div>
+                        <h3>MLOps &amp; Infra</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label">
+                                <span>Proficiency</span><span class="text-cyan">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <p data-i18n="skill.mlops.p">Docker, CUDA, ONNX, Model Optimization, CI/CD Pipeline</p>
+                    </div>
+
+                    <div class="skill-card skill-card--magenta">
+                        <div class="skill-card__icon">📡</div>
+                        <h3 data-i18n="skill.embedded.h3">Sistemas Embarcados</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label">
+                                <span>Proficiency</span><span class="text-magenta">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__fill skill-bar__fill--magenta" data-width="88"></div>
+                            </div>
+                        </div>
+                        <p data-i18n="skill.embedded.p">Raspberry Pi, NVIDIA Jetson, Edge Deployment, Real-time Systems
+                        </p>
+                    </div>
+
+                    <div class="skill-card skill-card--green">
+                        <div class="skill-card__icon">🌐</div>
+                        <h3>Web &amp; API</h3>
+                        <div class="skill-bar-wrapper">
+                            <div class="skill-bar-label">
+                                <span>Proficiency</span><span class="text-green">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar__fill skill-bar__fill--green" data-width="80"></div>
+                            </div>
+                        </div>
+                        <p data-i18n="skill.web.p">FastAPI, REST APIs, WebSockets, JavaScript, React</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <div class="linktr-container">
-            <a href="https://ugc.production.linktr.ee/57279ada-3503-4dbb-a167-a4c6172f711a_Jose-Eduardo-Soutello-de-Oliveira.pdf" target="_blank">Currículo (PT-BR)</a>
-            <a href="https://ugc.production.linktr.ee/1198f650-73e4-4d0e-8ee2-605c8ca09f96_Jose-Eduardo-Soutello-de-Oliveira-IN.pdf" target="_blank">Currículo (EN)</a>
-            <a href="https://linktr.ee/eduardosoutello" target="_blank">Linktree</a>
-            <a href="https://www.linkedin.com/in/jose-eduardo-soutello-de-oliveira/" target="_blank">LinkedIn</a>
-        </div>
-        <div class="gif-container">
-            <img src="https://media1.tenor.com/m/y1yKziqaf50AAAAd/nice.gif" alt="GIF animado">
-        </div>
-    </div>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" class="section fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-title__prefix">03</span>
+                    Data Log / Experiência
+                </div>
+                <h2 data-i18n="exp.h2">Timeline de Carreira</h2>
+                <div class="timeline">
+
+                    <!-- WEG: Desenvolvedor de Sistemas de Medição -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker__dot"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card__header">
+                                <div>
+                                    <h3 data-i18n="exp.weg1.role">Desenvolvedor de Sistemas de Medição</h3>
+                                    <span class="timeline-company" data-i18n="exp.weg1.company">WEG · Tempo Integral ·
+                                        Presencial</span>
+                                </div>
+                                <span class="timeline-date">fev 2025 — atual</span>
+                            </div>
+                            <p data-i18n="exp.weg1.p">Responsável por realizar e orientar profissionais de nível júnior
+                                em atividades de
+                                desenvolvimento de sistemas para controle e garantia da qualidade em processo — atuando
+                                no projeto, documentação, desenvolvimento, adequação e correção. Negociação entre áreas
+                                e pesquisa de novas tecnologias de medição e inspeção, implementando inovações nos
+                                processos atuais.</p>
+                            <div class="timeline-tags">
+                                <span class="tag tag--sm">Python</span>
+                                <span class="tag tag--sm">Angular</span>
+                                <span class="tag tag--sm">LabVIEW</span>
+                                <span class="tag tag--sm">Qualidade Industrial</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEG: Pesquisador em Visão Computacional -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker__dot timeline-marker__dot--magenta"></div>
+                        </div>
+                        <div class="timeline-card timeline-card--featured">
+                            <div class="timeline-card__header">
+                                <div>
+                                    <h3 data-i18n="exp.weg2.role">Pesquisador em Visão Computacional</h3>
+                                    <span class="timeline-company" data-i18n="exp.weg2.company">WEG · Temporário ·
+                                        Pesquisa FAPESC</span>
+                                </div>
+                                <span class="timeline-date">jul 2024 — jan 2025</span>
+                            </div>
+                            <p data-i18n-html="exp.weg2.p">Desenvolvimento de projeto de visão computacional para
+                                análise de qualidade de partes de
+                                motores (2D e 3D), sem impactar o ritmo de produção. Análise de fornecedores de hardware
+                                e software, execução de testes no laboratório de inovações tecnológicas do time de DSM.
+                                <strong>Pesquisa em parceria com a FAPESC.</strong>
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag tag--sm">Python</span>
+                                <span class="tag tag--sm">LabVIEW</span>
+                                <span class="tag tag--sm">Visão 2D/3D</span>
+                                <span class="tag tag--sm">FAPESC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FI Group -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker__dot"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card__header">
+                                <div>
+                                    <h3 data-i18n="exp.fi.role">Consultor Técnico de TI Jr</h3>
+                                    <span class="timeline-company" data-i18n="exp.fi.company">FI Group · Tempo Integral
+                                        · Híbrido</span>
+                                </div>
+                                <span class="timeline-date">set 2022 — jun 2024</span>
+                            </div>
+                            <p data-i18n="exp.fi.p">Consultoria especializada em inovação com base no manual de
+                                Frascati. Definição de
+                                cronogramas, planejamento estratégico para levantamento de dados das empresas.
+                                Elaboração de relatórios técnicos e defesa perante o MCTI. Atuação integrada com áreas
+                                comercial e jurídica.</p>
+                            <div class="timeline-tags">
+                                <span class="tag tag--sm">Inovação</span>
+                                <span class="tag tag--sm">Microsoft Excel</span>
+                                <span class="tag tag--sm">Segurança da Informação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bradesco -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-marker__dot"></div>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card__header">
+                                <div>
+                                    <h3 data-i18n="exp.bradesco.role">Analista de Projetos e Infraestrutura</h3>
+                                    <span class="timeline-company" data-i18n="exp.bradesco.company">Bradesco · Estágio ·
+                                        Híbrido</span>
+                                </div>
+                                <span class="timeline-date">abr 2021 — jun 2022</span>
+                            </div>
+                            <p data-i18n="exp.bradesco.p">Atendimento de chamados e criação/manutenção de scripts na
+                                ferramenta de schedule IWS.
+                                Execução em ambientes de desenvolvimento, homologação e produção. Participação em
+                                reuniões de brainstorm com metodologia Ágil. Mapeamento de ativos para atualização
+                                programada de hardware.</p>
+                            <div class="timeline-tags">
+                                <span class="tag tag--sm">Mainframe</span>
+                                <span class="tag tag--sm">Linux</span>
+                                <span class="tag tag--sm">IWS</span>
+                                <span class="tag tag--sm">Segurança da Informação</span>
+                                <span class="tag tag--sm">Agile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="section fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-title__prefix">04</span>
+                    Processed Frames / Portfolio
+                </div>
+                <h2 data-i18n="proj.h2">Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-card__header">
+                            <div class="project-terminal-text">
+                                <span class="text-green">[API_CONNECTION: SECURE]</span><br>
+                                DATA_SYNC: ON<br>
+                                LATENCY: <span class="text-cyan">18ms</span>
+                            </div>
+                            <div class="project-card__badge">
+                                <span class="status-dot status-dot--active"></span>LIVE
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">STATUS: <span class="text-green">DEPLOYED</span></div>
+                            <h3 data-i18n="proj.oreas.h3">Oreas — Financial App</h3>
+                            <p data-i18n="proj.oreas.p">Plataforma moderna de gestão financeira. Apresenta sincronização em tempo real, múltiplos usuários e sistema completo de convites baseados em permissões.</p>
+                            <div class="project-card__stack">
+                                <span class="tag tag--sm">Next.js</span>
+                                <span class="tag tag--sm">React</span>
+                                <span class="tag tag--sm">Supabase</span>
+                                <span class="tag tag--sm">Tailwind</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <a href="https://oreas.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                <span data-i18n="proj.link">Ver Projeto</span> →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-card--featured">
+                        <div class="project-card__header">
+                            <div class="project-terminal-text">
+                                <span class="text-magenta">[SEGMENTATION_MAP]</span><br>
+                                LAYER_COUNT: 48<br>
+                                OPTIMIZATION: <span class="text-cyan">FP16</span>
+                            </div>
+                            <div class="project-card__badge project-card__badge--magenta">
+                                FEATURED
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">IOU_SCORE: <span class="text-magenta">0.892</span></div>
+                            <h3 data-i18n="proj.nav.h3">Autonomous Navigation</h3>
+                            <p data-i18n="proj.nav.p">Algoritmo de segmentação semântica para navegação indoor de robôs
+                                autônomos. Combina SLAM
+                                e visão para mapeamento dinâmico de ambientes.</p>
+                            <div class="project-card__stack">
+                                <span class="tag tag--sm">PyTorch</span>
+                                <span class="tag tag--sm">OpenCV</span>
+                                <span class="tag tag--sm">Python</span>
+                                <span class="tag tag--sm">ROS</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
+                                class="project-link project-link--magenta">
+                                <span data-i18n="proj.link">Ver Código</span> →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card__header">
+                            <div class="project-terminal-text">
+                                <span class="text-green">[MULTIMETER_OCR]</span><br>
+                                7-SEG_READER: ON<br>
+                                ACCURACY: <span class="text-cyan">99.2%</span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">PRECISION: <span class="text-cyan">0.992</span></div>
+                            <h3 data-i18n="proj.ocr.h3">Multimeter OCR Engine</h3>
+                            <p data-i18n="proj.ocr.p">Engine customizado de OCR para leitura de displays de 7 segmentos
+                                em multímetros.
+                                Funciona em condições adversas de iluminação sem marcadores externos.</p>
+                            <div class="project-card__stack">
+                                <span class="tag tag--sm">OpenCV</span>
+                                <span class="tag tag--sm">Python</span>
+                                <span class="tag tag--sm">Image Processing</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                <span data-i18n="proj.link">Ver Código</span> →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card__header">
+                            <div class="project-terminal-text">
+                                <span class="text-green">[BIOMETRIC_AUTH]</span><br>
+                                ARCH: <span class="text-cyan">ZERO-KNOWLEDGE</span><br>
+                                INFRA: <span class="text-green">DOCKER</span>
+                            </div>
+                        </div>
+                        <div class="project-card__body">
+                            <div class="project-card__meta">SECURITY: <span class="text-green">MAXIMUM</span></div>
+                            <h3 data-i18n="proj.bio.h3">Biometric Vault</h3>
+                            <p data-i18n="proj.bio.p">Sistema de cofre de senhas ultra-seguro com arquitetura Zero-Knowledge e autenticação biométrica facial.</p>
+                            <div class="project-card__stack">
+                                <span class="tag tag--sm">Zero-Knowledge</span>
+                                <span class="tag tag--sm">FastAPI</span>
+                                <span class="tag tag--sm">React</span>
+                                <span class="tag tag--sm">Docker</span>
+                            </div>
+                        </div>
+                        <div class="project-card__footer">
+                            <a href="https://github.com/EduardoSoutello/biometri-system" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                <span data-i18n="proj.link">Ver Projeto</span> →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-cta">
+                    <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
+                        class="btn btn--ghost" data-i18n="proj.cta">
+                        Ver todos os projetos no GitHub →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GESTURE LAB ===== -->
+        <section id="gesture-lab" class="section fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-title__prefix">05</span>
+                    Experimental / Vision Lab
+                </div>
+                <div class="lab-header">
+                    <h2 data-i18n="lab.h2">Hand Gesture Lab</h2>
+                    <p data-i18n-html="lab.p">Experimente minha tecnologia de reconhecimento de gestos em tempo real,
+                        diretamente no seu navegador. Processamento 100% local — <span class="text-magenta">nenhum dado
+                            enviado</span>.</p>
+                </div>
+
+                <div class="lab-grid">
+                    <!-- Left: Camera Feed -->
+                    <div class="camera-container">
+                        <div class="scanner-line" aria-hidden="true"></div>
+                        <video id="webcam" autoplay playsinline aria-label="Feed da câmera"></video>
+                        <img id="webcam-ip"
+                            style="display: none; width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1);"
+                            alt="Stream IP">
+                        <canvas id="output_canvas" aria-hidden="true"></canvas>
+                        <div id="gesture-indicator" class="hud-box" aria-live="polite">
+                            <span id="gesture-name">AGUARDANDO...</span>
+                            <div class="confidence-mini">
+                                <div id="gesture-confidence" class="confidence-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Control Panel -->
+                    <div class="lab-controls hud-panel">
+                        <div class="mode-selector" role="group" aria-label="Modo de jogo">
+                            <button class="mode-btn active" data-mode="symbols" id="mode-symbols"
+                                data-i18n="lab.mode.symbols">SÍMBOLOS</button>
+                            <button class="mode-btn" data-mode="rps" id="mode-rps"
+                                data-i18n="lab.mode.rps">JOKENPÔ</button>
+                        </div>
+
+                        <div class="challenge-box">
+                            <!-- Modo Símbolos -->
+                            <div id="symbols-panel">
+                                <div class="hud-label" data-i18n="lab.target.label">LETRA ALVO (LIBRAS / ASL)</div>
+                                <div id="target-gesture" class="target-display">A — Polegar ↑</div>
+                            </div>
+
+                            <!-- Modo Jokenpô -->
+                            <div id="rps-panel" style="display:none;">
+                                <div class="hud-label" data-i18n="lab.rps.label">JOKENPÔ — Mostre sua jogada</div>
+                                <div class="rps-arena">
+                                    <div class="rps-side">
+                                        <div class="rps-label" data-i18n="lab.rps.you">VOCÊ</div>
+                                        <div id="rps-player" class="rps-icon">❓</div>
+                                    </div>
+                                    <div class="rps-vs">VS</div>
+                                    <div class="rps-side">
+                                        <div class="rps-label" data-i18n="lab.rps.ai">IA</div>
+                                        <div id="rps-cpu" class="rps-icon">❓</div>
+                                    </div>
+                                </div>
+                                <div id="rps-result" class="rps-result">Faça um gesto!</div>
+                            </div>
+                        </div>
+
+                        <div class="stats-box">
+                            <div class="stat-item">
+                                <span data-i18n="lab.fps">FPS:</span>
+                                <span id="fps-counter">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span data-i18n="lab.score">ACERTOS:</span>
+                                <span id="score-counter">0</span>
+                            </div>
+                        </div>
+
+                        <div class="stream-input-box">
+                            <div class="hud-label" data-i18n="lab.stream.label">FONTE DE VÍDEO (IP OPCIONAL)</div>
+                            <input type="text" id="stream-url" placeholder="http://192.168.1.x:4747/video"
+                                class="hud-input" aria-label="URL do stream IP">
+                        </div>
+
+                        <button id="start-camera" class="btn btn--primary btn-full" data-i18n="lab.btn.start">INICIAR
+                            CÂMERA</button>
+                        <p class="lab-note" data-i18n-html="lab.note">🔒 Sua câmera não é gravada. Processamento 100%
+                            local — <span class="text-magenta">nenhum dado enviado</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="section fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-title__prefix">06</span>
+                    Network / Connect
+                </div>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h2 data-i18n-html="contact.h2">Inicie uma<br><span class="gradient-text">Conexão</span></h2>
+                        <p data-i18n="contact.p">Interessado em colaborar, discutir projetos de Visão Computacional, ou
+                            simplesmente trocar
+                            uma ideia sobre o futuro da IA? Minha caixa de entrada está aberta.</p>
+                        <div class="contact-links">
+                            <a href="https://www.linkedin.com/in/jose-eduardo-soutello-de-oliveira/" target="_blank"
+                                rel="noopener noreferrer" class="contact-link contact-link--cyan">
+                                <span class="contact-link__icon">in</span>
+                                <div>
+                                    <span class="contact-link__label">LinkedIn</span>
+                                    <span class="contact-link__value">/jose-eduardo-soutello-de-oliveira</span>
+                                </div>
+                            </a>
+                            <a href="https://github.com/EduardoSoutello" target="_blank" rel="noopener noreferrer"
+                                class="contact-link contact-link--green">
+                                <span class="contact-link__icon">GH</span>
+                                <div>
+                                    <span class="contact-link__label">GitHub</span>
+                                    <span class="contact-link__value">/EduardoSoutello</span>
+                                </div>
+                            </a>
+                            <a href="mailto:eduardosoutellodev@gmail.com" class="contact-link contact-link--magenta">
+                                <span class="contact-link__icon">@</span>
+                                <div>
+                                    <span class="contact-link__label">Email</span>
+                                    <span class="contact-link__value">eduardosoutellodev@gmail.com</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name" class="hud-label"
+                                data-i18n="contact.name.label">IDENTIFICAÇÃO</label>
+                            <input type="text" id="contact-name" name="name" class="hud-input"
+                                data-i18n-placeholder="contact.name.ph" placeholder="Seu nome" required
+                                autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" class="hud-label" data-i18n="contact.email.label">EMAIL</label>
+                            <input type="email" id="contact-email" name="email" class="hud-input"
+                                data-i18n-placeholder="contact.email.ph" placeholder="seu@email.com" required
+                                autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" class="hud-label"
+                                data-i18n="contact.msg.label">MENSAGEM</label>
+                            <textarea id="contact-message" name="message" class="hud-input hud-textarea"
+                                data-i18n-placeholder="contact.msg.ph" placeholder="Descreva seu projeto ou proposta..."
+                                rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn-full" id="form-submit-btn"
+                            data-i18n="contact.submit">
+                            ENVIAR MENSAGEM
+                        </button>
+                        <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <p>&copy; 2025 José Eduardo Soutello de Oliveira. Todos os direitos reservados.</p>
+        <div class="container footer-inner">
+            <div class="footer-logo">EDUARDO_<span>SOUTELLO</span></div>
+            <p class="footer-copy" data-i18n="footer.copy">© 2026 Eduardo Soutello — Engineer // Developer // Visionary
+            </p>
+            <p class="footer-version">V_2.0.26_STABLE</p>
+        </div>
     </footer>
+
+    <!-- JS -->
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>
